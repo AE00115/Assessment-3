@@ -14,7 +14,7 @@ gy = int(input("Please enter y-coordinate of target goal: "))
 obstacles = int(input("Enter number of obstacles: "))
 
 #Add image to robot
-icon = VehicleIcon('RR.png',scale = 2)
+icon = VehicleIcon('RR.png',scale = 2.5)
 #creating car like model
 veh = Bicycle(
     animation = icon,
@@ -41,46 +41,21 @@ goal_marker_style = {
 plt.plot(goal[0], goal[1], **goal_marker_style)
 ###########################################################################################################################
 
-#Head to goal     LAB 8
-# run = True
-# while(run):
-#     goal_heading = atan2(  #angle of vehicle to target
-#     goal[1] - veh.x[1],
-#     goal[0] - veh.x[0])
-#     steer = goal_heading - veh.x[2]
-#     veh.step(0.5,steer)
-#     if((abs(goal[0]-veh.x[0]) > 0.05) or (abs(goal[1] - veh.x[1]) > 0.05)):
-#         run=True
-#     else:
-#         run=False
-
-# # #Range bearing sensor LAB 9
-sensor = RangeBearingSensor(robot = veh, map=map,animate = True)
-
-print('Sensor Readings: /n', sensor.h(veh.x))
-distances = [i[0] for i in sensor.h(veh.x)]
-angles = [i[1] for i in sensor.h(veh.x)]
+#Move to target
 run = True
 while(run):
-    for i in sensor.h(veh.x):
-        if i[0] < 2 :
-            if abs(i[1] < pi):
-                 run = False
-        else:
-            run = True
-            while(run):
-                goal_heading = atan2(  #angle of vehicle to target
-                goal[1] - veh.x[1],
-                goal[0] - veh.x[0])
-                steer = goal_heading - veh.x[2]
-                veh.step(1,steer)
-                if((abs(goal[0]-veh.x[0]) > 1) or (abs(goal[1] - veh.x[1]) > 1)):
-                    run=True
-                else:
-                    run=False
-                
+    goal_heading = atan2(  #angle of vehicle to target
+    goal[1] - veh.x[1],
+    goal[0] - veh.x[0])
+    steer = goal_heading - veh.x[2]
+    veh.step(1,steer)
+    if((abs(goal[0]-veh.x[0]) > 0.5) or (abs(goal[1] - veh.x[1]) > 0.5)):
+        run=True
+    else:
+        run=False
+###########################################################################################################################                
 
 #show plot
-                veh._animation.update(veh.x)
-                plt.pause(0.05)
+    veh._animation.update(veh.x)
+    plt.pause(0.05)
 plt.pause(1000)
