@@ -5,13 +5,13 @@ import matplotlib.pyplot as plt
 import numpy as np
 ############################################################################################################################
 #Allowing user to input coordinates
-x = eval(input("Please enter x-coordinate of starting point for robot: "))
-y = eval(input("Please enter y-coordinate of starting point for robot: "))
+x = int(input("Please enter x-coordinate of starting point for robot: ")) #asking user for intial coordinates 
+y = int(input("Please enter y-coordinate of starting point for robot: ")) #asking user for intial coordinates
 
-gx = int(input("Please enter x-coordinate of target goal: "))
-gy = int(input("Please enter y-coordinate of target goal: "))
+gx = int(input("Please enter x-coordinate of target goal: "))# asking user for target goal
+gy = int(input("Please enter y-coordinate of target goal: "))# askint user for target goal
 
-obstacles = int(input("Enter number of obstacles: "))
+obstacles = int(input("Enter number of obstacles: ")) # asking user to enter number of obstacles 
 
 #Add image to robot
 icon = VehicleIcon('RR.png',scale = 2.5)
@@ -22,7 +22,7 @@ veh = Bicycle(
     dim = 10,   
     x0 = (x, y, 0)  #setting starting coordinates
     )
-#print(veh.x)    #print vehicle position
+
 
 #initialize vehicle
 veh.init(plot=True)
