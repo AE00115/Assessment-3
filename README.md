@@ -1,4 +1,4 @@
-# Assesement 3
+# Autonomous Robot Navigation Simulation
 
 ## __By Ali El Naggari and Yehia Sulaiman__
 
@@ -10,10 +10,10 @@
  
  **Warning: Newer or older version of installed software may not work correctly due to constant chanages by updates, ensure correct versions are installed for your conveniance.**
 **********************************************************************************************************************************************************
-
+## Explanation
 This code simulates a robot moving to target coordinates in MATLAB.
- Robot is placed at coordinates specified by user input and moves to target from input. Program also asks for number of obstacles wanted and randomly generates them.
- 
+ Robot is placed at coordinates specified by user input and moves to target that is also specified by user input. Program also asks for number of obstacles wanted and randomly generates them. Robot should eventually be able to sense obstacles and avoid them.
+********************************************************************************************************************************************************** 
 **In Line 17 add name of image downloaded on device that is in the same directory as the code instead of RR.jpg in code.**
  
  ### Libaries Used:
@@ -25,7 +25,7 @@ This code simulates a robot moving to target coordinates in MATLAB.
 | RangeBearingSensor | ----  |         ----       | ----  |
 | LandmarkMap        | ----  |         ----       | ----  |
      
- 
+********************************************************************************************************************************************************** 
  ### Funtions Used:
      - int(input(" Insert text here ") // Asks for integer input by printing text between quotations
      - VehicleIcon('RR.png',scale = 2) // Selects Image downloaded and loads it into the simulation at desired scale.
@@ -37,7 +37,7 @@ This code simulates a robot moving to target coordinates in MATLAB.
      - abs( integer )                  // Gives abseloute of integer
      - veh._animation.update(veh.x)    // Updates plotting
      - plt.pause( integer )            // Runs loop for specified seconds after plotting is completed
-     
+**********************************************************************************************************************************************************      
  ### Future Work:
     - Be able to implment faster and more smooth plotting to provide more realistic simulations
     - Imporove obstacle avoidance
