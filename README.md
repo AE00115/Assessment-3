@@ -15,7 +15,8 @@ This code simulates a robot moving to target coordinates in MATLAB.
  Robot is placed at coordinates specified by user input and moves to target that is also specified by user input. Program also asks for number of obstacles wanted and randomly generates them. Robot should eventually be able to sense obstacles and avoid them.
  *********************************************************************************************************************************************************
  ## FlowChart
- 
+ ![image](https://user-images.githubusercontent.com/103752563/164712728-98d787b3-40bc-477d-9b05-579d2dcab696.png)
+
  
  
  
