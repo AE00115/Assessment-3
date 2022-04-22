@@ -49,3 +49,4 @@ This code simulates a robot moving to target coordinates in MATLAB.
     - Be able to implment faster and more smooth plotting to provide more realistic simulations
     - Imporove obstacle avoidance
     - Add moving obstacles to enhance simulation
+    - Applying the code and creating a path in a 3D application 
